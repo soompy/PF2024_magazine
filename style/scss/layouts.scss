@@ -42,12 +42,14 @@
             }
 
             &.on {
-                &.ico_menu {
-                    display: none;
-                }
+                svg {
+                    &.ico_menu {
+                        display: none;
+                    }
 
-                &.ico_close {
-                    display: block;
+                    &.ico_close {
+                        display: block;
+                    }
                 }
             }
         }
@@ -77,6 +79,10 @@
                         display: block;
                         padding: 14px;
                         border-bottom: 1px solid #000;
+
+                        &:hover {
+                            font-weight: bold;
+                        }
 
                         span {
                             display: block;

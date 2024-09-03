@@ -37,10 +37,10 @@
 #header .inner .btn-menu svg.ico_close {
   display: none;
 }
-#header .inner .btn-menu.on.ico_menu {
+#header .inner .btn-menu.on svg.ico_menu {
   display: none;
 }
-#header .inner .btn-menu.on.ico_close {
+#header .inner .btn-menu.on svg.ico_close {
   display: block;
 }
 #header .inner .gnb-wrapper {
@@ -67,6 +67,9 @@
   display: block;
   padding: 14px;
   border-bottom: 1px solid #000;
+}
+#header .inner .gnb-wrapper .gnb li a:hover {
+  font-weight: bold;
 }
 #header .inner .gnb-wrapper .gnb li a span {
   display: block;
