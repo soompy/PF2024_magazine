@@ -46,6 +46,7 @@
             }
 
             &.on {
+                background: var(--secondary-color);
                 svg {
                     &.ico_menu {
                         display: none;
@@ -65,6 +66,7 @@
             left: 0;
             top: 100px;
             width: 100%;
+            background: var(--white-color);
             transform: all 0.5s ease-in-out;
 
             &.on {
@@ -86,12 +88,31 @@
                         border-bottom: 1px solid var(--primary-color);
 
                         &:hover {
-                            font-weight: bold;
+                            span {
+                                display: block;
+                                font-weight: bold;
+                                color: var(--secondary-color);
+                                animation: ef 0.5s linear;
+                            }
                         }
 
-                        span {
+                        @keyframes ef {
+                            0% {
+                                transform: translateY(-8px);
+                            }
+
+                            50% {
+                                transform: translateY(8px);
+                            }
+
+                            100% {
+                                transform: translateY(0);
+                            }
+                        }
+
+                        strong {
                             display: block;
-                            transition: all 0.5s linear;
+                            transition: all 0.3s linear;
 
                             &:first-child {
                                 opacity: 1;
@@ -108,12 +129,13 @@
                             overflow: hidden;
                             display: block;
                             height: 43px;
+                            margin-bottom: 14px;
                             font-size: 30px;
                             font-weight: bold;
                             border-bottom: none;
 
                             &:hover {
-                                span {
+                                strong {
                                     &:first-child {
                                         opacity: 0;
                                     }
