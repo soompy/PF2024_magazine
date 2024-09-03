@@ -1,2 +1,32 @@
-@import url(./common.css);
-@import url(./layouts.css);
+@import url(../css/common.css);
+@import url(../css/layouts.css);
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
+
+.contents {
+    position: relative;
+    width: 100%;
+    padding: var(--padding-base);
+
+    .visual {
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        height: 80vh;
+        font-family: "Nanum Myeongjo", serif;
+        font-weight: 700;
+        font-style: normal;
+        border: 1px solid var(--primary-color);
+
+        .word {
+            position: absolute;
+            cursor: grab;
+            font-size: 30px;
+            color: var(--primary-color);
+            
+            &.highlighted {
+                font-weight: bold;                
+                color: var(--secondary-color);
+            }
+        }
+    }
+}
