@@ -1,0 +1,97 @@
+#header {
+  position: sticky;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 10px;
+}
+#header .inner {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  border: 1px solid #000;
+}
+#header .inner .logo {
+  width: 200px;
+  padding: 10px;
+}
+#header .inner .btn-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  margin-left: auto;
+  border-left: 1px solid #000;
+}
+#header .inner .btn-menu svg {
+  width: 30px;
+  height: 30px;
+  transition: all 0.5s linear;
+}
+#header .inner .btn-menu svg.ico_menu {
+  display: block;
+}
+#header .inner .btn-menu svg.ico_close {
+  display: none;
+}
+#header .inner .btn-menu.on.ico_menu {
+  display: none;
+}
+#header .inner .btn-menu.on.ico_close {
+  display: block;
+}
+#header .inner .gnb-wrapper {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100px;
+  width: 100%;
+  transform: all 0.5s ease-in-out;
+}
+#header .inner .gnb-wrapper.on {
+  display: block;
+}
+#header .inner .gnb-wrapper .gnb {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  position: relative;
+}
+#header .inner .gnb-wrapper .gnb li {
+  border: 1px solid #000;
+}
+#header .inner .gnb-wrapper .gnb li a {
+  display: block;
+  padding: 14px;
+  border-bottom: 1px solid #000;
+}
+#header .inner .gnb-wrapper .gnb li a span {
+  display: block;
+  transition: all 0.5s linear;
+}
+#header .inner .gnb-wrapper .gnb li a span:first-child {
+  opacity: 1;
+}
+#header .inner .gnb-wrapper .gnb li a span:last-child {
+  opacity: 0;
+  color: aquamarine;
+  text-shadow: 1px 2px 3px #333;
+}
+#header .inner .gnb-wrapper .gnb li a:last-child {
+  overflow: hidden;
+  display: block;
+  height: 43px;
+  font-size: 30px;
+  font-weight: bold;
+  border-bottom: none;
+}
+#header .inner .gnb-wrapper .gnb li a:last-child:hover span:first-child {
+  opacity: 0;
+}
+#header .inner .gnb-wrapper .gnb li a:last-child:hover span:last-child {
+  opacity: 1;
+  transform: translateY(-30px);
+}/*# sourceMappingURL=layouts.css.map */
