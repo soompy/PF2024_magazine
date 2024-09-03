@@ -97,4 +97,18 @@
 #header .inner .gnb-wrapper .gnb li a:last-child:hover span:last-child {
   opacity: 1;
   transform: translateY(-30px);
+}
+
+#footer {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+}
+#footer .inner {
+  padding: 20px;
+  border: 1px solid #000;
+}
+#footer .inner .logo {
+  width: 200px;
+  margin: auto;
 }/*# sourceMappingURL=layouts.css.map */

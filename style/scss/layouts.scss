@@ -126,3 +126,19 @@
         }
     }
 }
+
+#footer {
+    position: relative;
+    width: 100%;
+    padding: 10px;
+
+    .inner {
+        padding: 20px;
+        border: 1px solid #000;
+
+        .logo {
+            width: 200px;
+            margin: auto;
+        }
+    }
+}
