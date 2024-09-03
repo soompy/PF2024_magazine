@@ -6,7 +6,10 @@
     top: 0;
     z-index: 10;
     width: 100%;
+    max-width: 1400px;
+    margin: auto;
     padding: var(--padding-base);
+    padding-bottom: 0;
     background: var(--white-color);
 
     .inner {
@@ -47,6 +50,7 @@
 
             &.on {
                 background: var(--secondary-color);
+
                 svg {
                     &.ico_menu {
                         display: none;
@@ -157,6 +161,8 @@
 #footer {
     position: relative;
     width: 100%;
+    max-width: 1400px;
+    margin: auto;
     padding: var(--padding-base);
 
     .inner {
@@ -166,6 +172,84 @@
         .logo {
             width: 200px;
             margin: auto;
+        }
+    }
+}
+
+
+@media screen and (max-width: 920px) {
+    #header {
+        .inner {
+            .logo {
+                width: 180px;
+            }
+
+            .btn-menu {
+                width: 60px;
+                height: 60px;
+
+                svg {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+
+            .gnb-wrapper {
+                top: 70px;
+
+                .gnb {
+                    gap: var(--padding-base);
+
+                    li {
+                        a {
+                            padding: var(--padding-base);
+
+                            &:last-child {
+                                height: 33px;
+                                margin-bottom: var(--padding-base);
+                                font-size: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 720px) {
+    #header {
+        .inner {
+            .gnb-wrapper {
+                overflow: scroll;
+                height: 100vh;
+
+                .gnb {
+                    grid-template-columns: repeat(2, 1fr);
+
+                    li {
+                        a {
+                            &:last-child {
+                                height: 28px;
+                                font-size: 18px;
+
+                                &:hover {
+                                    strong {
+
+                                        &:last-child {
+                                            transform: translateY(-20px);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+            }
         }
     }
 }

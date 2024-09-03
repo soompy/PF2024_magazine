@@ -5,7 +5,10 @@
   top: 0;
   z-index: 10;
   width: 100%;
+  max-width: 1400px;
+  margin: auto;
   padding: var(--padding-base);
+  padding-bottom: 0;
   background: var(--white-color);
 }
 #header .inner {
@@ -125,6 +128,8 @@
 #footer {
   position: relative;
   width: 100%;
+  max-width: 1400px;
+  margin: auto;
   padding: var(--padding-base);
 }
 #footer .inner {
@@ -134,4 +139,51 @@
 #footer .inner .logo {
   width: 200px;
   margin: auto;
+}
+
+@media screen and (max-width: 920px) {
+  #header .inner .logo {
+    width: 180px;
+  }
+  #header .inner .btn-menu {
+    width: 60px;
+    height: 60px;
+  }
+  #header .inner .btn-menu svg {
+    width: 20px;
+    height: 20px;
+  }
+  #header .inner .gnb-wrapper {
+    top: 70px;
+  }
+  #header .inner .gnb-wrapper .gnb {
+    gap: var(--padding-base);
+  }
+  #header .inner .gnb-wrapper .gnb li a {
+    padding: var(--padding-base);
+  }
+  #header .inner .gnb-wrapper .gnb li a:last-child {
+    height: 33px;
+    margin-bottom: var(--padding-base);
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 720px) {
+  #header .inner .gnb-wrapper {
+    overflow: scroll;
+    height: 100vh;
+  }
+  #header .inner .gnb-wrapper .gnb {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #header .inner .gnb-wrapper .gnb li a:last-child {
+    height: 28px;
+    font-size: 18px;
+  }
+  #header .inner .gnb-wrapper .gnb li a:last-child:hover strong:last-child {
+    transform: translateY(-20px);
+  }
+  #header .inner .gnb-wrapper::-webkit-scrollbar {
+    display: none;
+  }
 }

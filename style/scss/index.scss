@@ -1,31 +1,154 @@
 @import url(../css/common.css);
 @import url(../css/layouts.css);
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&display=swap');
 
 .contents {
     position: relative;
     width: 100%;
+    max-width: 1400px;
+    margin: auto;
     padding: var(--padding-base);
 
     .visual {
         overflow: hidden;
         position: relative;
         width: 100%;
-        height: 80vh;
+        height: 60vh;
         font-family: "Nanum Myeongjo", serif;
-        font-weight: 700;
+        font-weight: bold;
         font-style: normal;
         border: 1px solid var(--primary-color);
 
         .word {
             position: absolute;
             cursor: grab;
-            font-size: 30px;
+            font-size: 2.5rem;
             color: var(--primary-color);
-            
+
             &.highlighted {
-                font-weight: bold;                
+                font-weight: bold;
                 color: var(--secondary-color);
+            }
+        }
+    }
+}
+
+.area-common {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-rows: repeat(500px, 500px);
+    gap: var(--padding-base);
+    margin: var(--padding-base) 0;
+    font-family: "Noto Serif KR", serif;
+    font-optical-sizing: auto;
+
+    article {
+        font-weight: bold;
+        word-break: keep-all;
+        border: 1px solid var(--primary-color);
+
+        &.photo-box {
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+
+            &:nth-child(1) {
+                background-image: url("https://img.vogue.co.kr/vogue/2024/09/style_66d6b5932cb6f-933x1400.jpg");
+
+            }
+
+            &:nth-child(6) {
+                background-image: url("https://img.vogue.co.kr/vogue/2024/09/style_66d6b33f9f968.jpg");
+            }
+
+            &:nth-child(10) {
+                background-image: url("https://img.vogue.co.kr/vogue/2024/09/style_66c6c700a5a3d-1120x1400.jpg");
+            }
+        }
+
+        .inner {
+            padding: 20px;
+
+            h2 {
+                font-size: 2rem;
+                line-height: 3rem;
+                margin-bottom: 2rem;
+            }
+
+            p {
+                font-size: 1.4rem;
+                line-height: 2.4rem;
+
+                a {
+                    color: var(--secondary-color);
+                }
+            }
+
+            ul {
+                li {
+                    margin: 1.4rem 0;
+
+                    dl {
+                        display: flex;
+                        font-size: 1.2rem;
+
+                        dd {
+                            margin-left: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        .delete-line {
+            text-decoration: line-through;
+        }
+
+        &:nth-child(1) {
+            grid-column: 1 / span 2;
+            grid-row: 1 / span 3;
+        }
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .contents {     
+        .visual {
+            .word {
+                font-size: 1.4rem;
+            }
+        }
+    }
+    .area-common {
+        article {
+            .inner {
+                padding: 14px;
+
+                h2 {
+                    font-size: 1.5rem;
+                    line-height: 2rem;
+                    margin-bottom: 1.3rem;
+                }
+
+                p {
+                    font-size: 1.1rem;
+                    line-height: 1.6rem;
+                }
+
+                ul {
+                    li {
+                        margin: 1rem 0;
+
+                        dl {
+                            font-size: 1rem;
+
+                            dd {
+                                margin-left: 0.5rem;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
