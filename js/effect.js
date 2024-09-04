@@ -128,3 +128,6 @@ window.addEventListener("DOMContentLoaded", (event) => {
   splitWords();
   renderCanvas();
 });
+
+
+
