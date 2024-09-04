@@ -3,12 +3,9 @@ const splitWords = () => {
   const text = textNode.textContent;
   const newDomElements = text.split(" ").map((text) => {
     const highlighted =
-      text.startsWith(`"해외잡지"`) ||
-      text.startsWith(`월구독`) ||
-      text.startsWith(`경제`) ||
-      text.startsWith(`기술`) ||
-      text.startsWith(`패션`) ||
-      text.startsWith(`국내잡지`);
+      text.startsWith(`"magazine"`) ||
+      text.startsWith(`subscription`) ||      
+      text.startsWith(`Korea`);
     return `<span class="word ${
       highlighted ? "highlighted" : null
     }">${text}</span>`;
@@ -78,6 +75,7 @@ const renderCanvas = () => {
     const height = elemRef.offsetHeight;
     return {
       body: Matter.Bodies.rectangle(canvasSize.width / 2, 0, width, height, {
+        restitution: 0.9,
         render: {
           fillStyle: "transparent",
         },
