@@ -50,6 +50,7 @@
 
             &.on {
                 background: var(--secondary-color);
+                z-index: 20;
 
                 svg {
                     &.ico_menu {
@@ -63,14 +64,15 @@
             }
         }
 
-        .gnb-wrapper {            
+        .gnb-wrapper {
             display: none;
+            overflow: hidden;            
             position: absolute;
-            z-index: 5;
+            z-index: 20;
             left: 0;
             top: 100px;
             width: 100%;
-            height: 100vh;
+            height: calc(100vh - 130px);
             background: var(--white-color);
             transform: all 0.5s ease-in-out;
 
@@ -78,13 +80,16 @@
                 display: block;
             }
 
-            .gnb {        
-                overflow: scroll;        
+            .gnb {
+                overflow: auto;
                 display: grid;
                 grid-template-columns: repeat(6, 1fr);
                 gap: 20px;
                 position: relative;
                 height: 100%;
+                padding: 0;
+
+                &::-webkit-scrollbar {display: none;}
 
                 li {
                     border: 1px solid var(--primary-color);
@@ -159,6 +164,21 @@
                 }
             }
         }
+    }
+}
+
+.dim {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    background: var(--white-color);
+
+    &.on {
+        display: block;
     }
 }
 
